@@ -1,75 +1,151 @@
-# React + TypeScript + Vite
+# MovieLib
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieLib is a movie and TV show discovery platform built with React, TypeScript and TMDB API.
 
-Currently, two official plugins are available:
+The application allows users to browse popular and top-rated movies and TV shows, search for specific titles, view detailed information and manage a personal favorites collection.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Preview
 
-## React Compiler
+### Home Page
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Main page featuring an animated hero section built with Motion, horizontal movie and TV show sliders, and a Top 10 TV Shows section.
 
-Note: This will impact Vite dev & build performances.
+![Home Page](./docs/home.png)
 
-## Expanding the ESLint configuration
+### Media Catalog
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Browse popular and top-rated movies and TV shows with URL-based pagination and responsive media cards.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+![Media Catalog](./docs/media-catalog.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Details Page
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Detailed information page for movies and TV shows, including genres, cast members, production companies, ratings, release information and plot overview.
+
+![Details Page](./docs/details.png)
+
+### Favorites
+
+Personal favorites collection with Local Storage persistence. Saved movies and TV shows remain available between browser sessions.
+
+![Favorites](./docs/favorites.png)
+
+## Features
+
+### Home Page
+
+* Animated hero section built with Framer Motion
+* Horizontal movie sliders
+* Top 10 highest-rated TV shows section
+
+### Movies & TV Shows
+
+* Popular Movies
+* Top Rated Movies
+* Popular TV Shows
+* Top Rated TV Shows
+
+Each category supports pagination and displays 20 items per page.
+
+### Search System
+
+* Search movies and TV shows by title
+* Fast navigation to detailed pages
+
+### Details Pages
+
+Every movie and TV show includes a dedicated details page with:
+
+* Title and poster
+* Overview and plot description
+* Genres
+* User rating
+* Release information
+* Production companies
+* Cast information
+* Additional data provided by the TMDB API
+
+### Favorites
+
+* Save movies and TV shows to favorites
+* Favorites stored in Local Storage
+* Persistent data between sessions
+
+## Architecture Highlights
+
+* Component-based architecture
+* Custom React hooks
+* Reusable UI components
+* Type-safe API integration
+* URL-based pagination
+* Local Storage persistence
+* Dynamic routing with React Router
+* Separation of concerns between pages, components, hooks and API layer
+
+## Tech Stack
+
+### Frontend
+
+* React 19
+* TypeScript
+* Vite
+* React Router
+
+### Styling & UI
+
+* Tailwind CSS 4
+* Inter Font
+* Lucide React Icons
+
+### Animations
+
+* Motion (Framer Motion)
+
+### Data & API
+
+* Axios
+* TMDB API
+
+### Development Tools
+
+* ESLint
+* TypeScript ESLint
+
+## Installation
+
+```bash
+git clone https://github.com/nikita-dev17/MovieLib.git
+cd MovieLib
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Environment Variables
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Create a `.env` file in the project root:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_TMDB_API_KEY=your_api_key
 ```
+
+## Run Development Server
+
+```bash
+npm run dev
+```
+
+## Project Goals
+
+This project was created to practice building a larger React application with:
+
+* TypeScript
+* API integration
+* State management
+* Custom hooks
+* Component composition
+* Routing
+* Pagination
+* Persistent user data
+
+## Author
+
+Nikita Ivanov

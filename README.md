@@ -94,7 +94,6 @@ Every movie and TV show includes a dedicated details page with:
 ### Styling & UI
 
 * Tailwind CSS 4
-* Inter Font
 * Lucide React Icons
 
 ### Animations

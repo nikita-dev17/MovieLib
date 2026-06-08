@@ -112,8 +112,6 @@ Every movie and TV show includes a dedicated details page with:
 
 ## Installation
 
-### pnpm (recommended)
-
 ```bash
 git clone https://github.com/nikita-dev17/MovieLib.git
 cd MovieLib

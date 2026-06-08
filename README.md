@@ -8,7 +8,7 @@ The application allows users to browse popular and top-rated movies and TV shows
 
 ### Home Page
 
-Main page featuring an animated hero section built with Motion, horizontal movie and TV show sliders, and a Top 10 TV Shows section.
+Main page featuring an animated hero section built with Motion, two horizontal movie sliders, and a Top 10 TV Shows section.
 
 ![Home Page](./docs/home.png)
 

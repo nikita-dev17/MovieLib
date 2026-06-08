@@ -112,10 +112,12 @@ Every movie and TV show includes a dedicated details page with:
 
 ## Installation
 
+### pnpm (recommended)
+
 ```bash
 git clone https://github.com/nikita-dev17/MovieLib.git
 cd MovieLib
-npm install
+pnpm install
 ```
 
 ## Environment Variables
@@ -129,7 +131,7 @@ VITE_TMDB_API_KEY=your_api_key
 ## Run Development Server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## Project Goals

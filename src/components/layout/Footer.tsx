@@ -11,12 +11,12 @@ export default function Footer() {
         </Link>
 
         <p className="mt-2 max-w-md text-sm text-white/50">
-          Browse thousands of movies and TV shows.
+          Переглядайте тисячі фільмів та серіалів в одному місці.
         </p>
 
         <div className="mt-8 border-t border-white/10 pt-4">
           <p className="text-sm text-white/40">
-            &copy; {new Date().getFullYear()} {APP_NAME}. Data provided by TMDB.
+            &copy; {new Date().getFullYear()} {APP_NAME}. Дані надані TMDB.
           </p>
         </div>
 

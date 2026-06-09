@@ -41,7 +41,7 @@ export default function SearchInput({ className, onClose }: SearchInputProps) {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search movies..."
+          placeholder="Пошук..."
           value={query}
           onChange={handleChange}
           className="
@@ -78,7 +78,7 @@ export default function SearchInput({ className, onClose }: SearchInputProps) {
 
             <div className="flex items-center gap-3 mt-1">
               <span className="text-sm text-white/60">
-                {element.media_type === "movie" ? "Movie" : "TV shows"}
+                {element.media_type === "movie" ? "Фільм" : "Серіал"}
               </span>
 
               <Release

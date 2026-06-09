@@ -1,114 +1,40 @@
 # MovieLib
 
-MovieLib is a movie and TV show discovery platform built with React, TypeScript and TMDB API.
+MovieLib is a movie and TV show discovery platform built with React 19, TypeScript, and the TMDB API.
 
-The application allows users to browse popular and top-rated movies and TV shows, search for specific titles, view detailed information and manage a personal favorites collection.
 
-## Preview
-
-### Home Page
-
-Main page featuring an animated hero section built with Motion, two horizontal movie sliders, and a Top 10 TV Shows section.
-
-![Home Page](./docs/home.png)
-
-### Media Catalog
-
-Browse popular and top-rated movies and TV shows with URL-based pagination and responsive media cards.
-
-![Media Catalog](./docs/media-catalog.png)
-
-### Details Page
-
-Detailed information page for movies and TV shows, including genres, cast members, production companies, ratings, release information and plot overview.
-
-![Details Page](./docs/details.png)
-
-### Favorites
-
-Personal favorites collection with Local Storage persistence. Saved movies and TV shows remain available between browser sessions.
-
-![Favorites](./docs/favorites.png)
 
 ## Features
 
-### Home Page
-
-* Animated hero section built with Framer Motion
-* Horizontal movie sliders
-* Top 10 highest-rated TV shows section
-
-### Movies & TV Shows
-
-* Popular Movies
-* Top Rated Movies
-* Popular TV Shows
-* Top Rated TV Shows
-
-Each category supports pagination and displays 20 items per page.
-
-### Search System
-
-* Search movies and TV shows by title
-* Fast navigation to detailed pages
-
-### Details Pages
-
-Every movie and TV show includes a dedicated details page with:
-
-* Title and poster
-* Overview and plot description
-* Genres
-* User rating
-* Release information
-* Production companies
-* Cast information
-* Additional data provided by the TMDB API
-
-### Favorites
-
-* Save movies and TV shows to favorites
-* Favorites stored in Local Storage
-* Persistent data between sessions
-
-## Architecture Highlights
-
-* Component-based architecture
-* Custom React hooks
-* Reusable UI components
-* Type-safe API integration
-* URL-based pagination
-* Local Storage persistence
-* Dynamic routing with React Router
-* Separation of concerns between pages, components, hooks and API layer
+* **Fully Responsive UI:** The application is fully optimized for mobile, tablet, and desktop devices.
+* **Smart Search System:** Real-time search functionality with fast navigation to detailed pages.
+* **Media Catalog:** Browse popular and top-rated movies and TV shows with URL-based pagination.
+* **Rich Details:** Detailed pages including genres, cast, production companies, ratings, and plot summaries.
+* **Favorites Collection:** Manage personal favorites with persistent storage using Local Storage.
 
 ## Tech Stack
 
 ### Frontend
-
 * React 19
 * TypeScript
 * Vite
 * React Router
 
 ### Styling & UI
-
 * Tailwind CSS 4
-* Lucide React Icons
-
-### Animations
-
-* Motion (Framer Motion)
+* Lucide React
 
 ### Data & API
-
 * Axios
 * TMDB API
 
-### Development Tools
+## Architecture Highlights
 
-* ESLint
-* TypeScript ESLint
+* Component-based architecture
+* Type-safe API integration
+* Custom React hooks for state management
+* URL-based pagination
+* Separation of concerns between pages, components, and API layer
 
 ## Installation
 
@@ -120,9 +46,9 @@ pnpm install
 
 ## Environment Variables
 
-Create a `.env` file in the project root:
+Create a .env file in the project root:
 
-```env
+```bash
 VITE_TMDB_API_KEY=your_api_key
 ```
 
@@ -134,17 +60,17 @@ pnpm dev
 
 ## Project Goals
 
-This project was created to practice building a larger React application with:
+This project was created to practice building a professional-grade React application with:
 
-* TypeScript
-* API integration
-* State management
-* Custom hooks
-* Component composition
-* Routing
-* Pagination
-* Persistent user data
+* TypeScript and type safety
+
+* Advanced API integration
+
+* Responsive UI/UX design
+
+* Persistent user data handling
+
+* Component composition and state management
 
 ## Author
-
 Nikita Ivanov

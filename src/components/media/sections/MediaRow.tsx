@@ -14,21 +14,20 @@ interface MediaRowProps {
 
 export default function MediaRow ({ title, items, page, totalPages, loading, onNext, onPrev }: MediaRowProps) {
   return (
-    <section className="">
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white border-l-4 border-yellow-500 pl-4">
+    <section>
+      <div className="mb-8 lg:mb-12">
+        <h2 className="text-xl lg:text-3xl font-bold text-white border-l-4 border-yellow-500 pl-3 lg:pl-4">
           {title}
         </h2>
       </div>
 
-      <div className="grid grid-cols-5 gap-6">
-        {items.map((element) => (
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">        {items.map((element) => (
           <MediaCard key={element.id} media={element}/>
         ))}
       </div>
       
       {page && totalPages && (
-        <div className="my-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div className="mt-4 lg:my-6 rounded-2xl border border-white/10 bg-white/5 p-2 lg:p-6">
           <div className="mx-auto flex max-w-xl items-center justify-between">
 
             <button disabled={loading || page === 1} onClick={onPrev} className="
@@ -38,10 +37,10 @@ export default function MediaRow ({ title, items, page, totalPages, loading, onN
             </button>
 
             <div className="text-center">
-              <p className="text-2xl font-bold text-white">
+              <p className="text-lg lg:text-2xl font-bold text-white">
                 Сторінка {page}
               </p>
-              <p className="text-sm text-white/50">
+              <p className="text-xs lg:text-sm text-white/50">
                 з {totalPages} сторінок
               </p>
             </div>

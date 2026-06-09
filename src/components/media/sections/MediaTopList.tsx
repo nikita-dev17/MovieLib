@@ -1,4 +1,4 @@
-import type { Media } from "../../../types/ui"
+import type { Media } from "../../../types/media"
 import Rating from "../../ui/Rating"
 import { useState } from "react"
 import SectionTitle from "../../ui/SectionTitle"
@@ -20,24 +20,24 @@ export default function MediaTopList ({ title, description="", items }: MediaLis
   return (
     <>
       <SectionTitle title={title} description={description}/>
-      <div className="rounded-2xl border border-white/10 bg-white/3 p-6">
-        <div className="grid grid-cols-2 gap-8">
+      <div className="rounded-2xl border border-white/10 bg-white/3 p-3 lg:p-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
           {/* LIST */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 order-2 lg:order-1">
             {items.slice(0,10).map((element, index) => (
               <button 
                 onClick={() => setSelectedIndex(index)}
                 key={index} 
-                className={`flex items-center justify-between rounded-xl border p-4 transition-all
+                className={`flex items-center justify-between rounded-xl border p-2 lg:p-4 transition-all
                   ${selectedMedia?.id === element.id ? "border-yellow-500/50 bg-yellow-500/5" : "border-white/10"}
                 `}
               >
                 <div className="flex items-center gap-4 ">
-                  <p className="text-3xl font-black text-white/20">
+                  <p className="text-xl lg:text-3xl font-black text-white/20">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <p className="font-semibold text-white">
+                  <p className="text-sm lg:text-base line-clamp-1 font-semibold text-white">
                     {element.title || element.name}
                   </p>
                 </div>
@@ -46,18 +46,19 @@ export default function MediaTopList ({ title, description="", items }: MediaLis
             ))}
           </div>
 
-          <div className="rounded-xl bg-white/5 p-6">
+          {/* PREVIEW */}
+          <div className="rounded-xl bg-white/5 p-3 lg:p-6 order-1 lg:order-2">
             {selectedMedia && (
               <>
                 <img src={`https://image.tmdb.org/t/p/original${selectedMedia.backdrop_path}`}
                   className="mb-5 h-64 w-full rounded-xl object-cover"
                 />
 
-                <span className="mb-3 inline-block rounded-full bg-yellow-500/20 px-3 py-1 text-sm font-medium text-yellow-400">
+                <span className="mb-3 inline-block rounded-full bg-yellow-500/20 px-3 py-1 text-xs lg:text-sm font-medium text-yellow-400">
                   ТОП #{selectedIndex + 1}
                 </span>
 
-                <h3 className="mb-3 text-3xl font-bold text-white">
+                <h3 className="mb-3 text-2xl lg:text-3xl font-bold text-white">
                   {selectedMedia.name || selectedMedia.title}
                 </h3>
 
@@ -68,11 +69,11 @@ export default function MediaTopList ({ title, description="", items }: MediaLis
                   </span>
                 </div>
 
-                <p className="mb-6 line-clamp-5 leading-relaxed text-white/70">
+                <p className="text-sm lg:text-base mb-6 line-clamp-5 leading-relaxed text-white/70">
                   {selectedMedia.overview}
                 </p>
 
-                <Link to={selectedMedia.title ? `/movie/${selectedMedia.id}` : `/tv/${selectedMedia.id}`} className="rounded-xl bg-yellow-500 px-5 py-3 font-semibold text-black transition-all hover:scale-105">
+                <Link to={selectedMedia.title ? `/movie/${selectedMedia.id}` : `/tv/${selectedMedia.id}`} className="inline-block rounded-xl bg-yellow-500 px-5 py-3 font-semibold  transition-all hover:scale-105">
                   Детальніше
                 </Link>
               </>

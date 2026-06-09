@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@utility no-scrollbar {
+  @apply scrollbar-none [&::-webkit-scrollbar]:hidden;
+}
+
 html {
   background-color: black;
   font-family: 'Inter', sans-serif;

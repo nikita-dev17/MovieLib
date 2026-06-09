@@ -10,7 +10,7 @@ interface MediaCardProps {
 export default function MediaCard ({ media }: MediaCardProps) {
   return (
     <Link  to={media.title ? `/movies/${media.id}` : `/tv/${media.id}`}  className="
-      w-51.5 h-112 block overflow-hidden rounded-xl bg-zinc-800 transition-transform duration-300 hover:scale-101 shrink-0
+      w-full h-full flex flex-col overflow-hidden rounded-lg lg:rounded-xl bg-zinc-800 transition-transform duration-300 hover:scale-101 shrink-0
     ">
 
       {/* POSTER */}
@@ -19,23 +19,16 @@ export default function MediaCard ({ media }: MediaCardProps) {
       />
 
       {/* ABOUT */}
-      <div className="p-3 h-28 flex flex-col justify-between">
+      <div className="p-2 lg:p-3 flex flex-col flex-1">
         
         {/* TITLE AND TYPE */}
-        <p className="min-h-14 text-lg font-bold text-white line-clamp-2 mb-1">
+        <p className="min-h-10 lg:min-h-14 text-sm lg:text-lg font-bold text-white line-clamp-2 mb-1">
           {media.title || media.name}
         </p>
-        <span className="self-start px-2 py-1 text-xs font-medium rounded-md bg-yellow-500/20 text-yellow-300">
-          {media.title ? "🎬 Фільм" : "📺 Серіал"}
-        </span>
 
-
-        <div className="mt-2 flex justify-between items-center">
+        <div className="mt-auto flex justify-between items-center">
           <Rating vote_average={media.vote_average}/>
-          <Release
-            release_date={media.release_date}
-            first_air_date={media.first_air_date}
-          />
+          <Release release_date={media.release_date} first_air_date={media.first_air_date}/>
         </div>
 
       </div>

@@ -28,10 +28,10 @@ export default function MediaInfoGrid ({ media, mediaType }: MediaInfoGridProps)
   ]
 
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
       {/* INFO */}
-      <div className="p-8 bg-white/5 rounded-xl">
+      <div className="p-6 lg:p-8 bg-white/5 rounded-xl">
         <h2 className="mb-6 text-2xl font-bold text-white">
           Деталі
         </h2>
@@ -46,15 +46,15 @@ export default function MediaInfoGrid ({ media, mediaType }: MediaInfoGridProps)
       </div>
 
       {/* COMPANIES */}
-      <div className="p-8 bg-white/5 rounded-xl">
-        <h2 className="mb-6 text-2xl font-bold text-white">
+      <div className="p-6 lg:p-8 bg-white/5 rounded-xl">
+        <h2 className="mb-6 text-xl lg:text-2xl font-bold text-white">
           Виробництво
         </h2>
 
         <div className="space-y-3">
           <div className="grid grid-cols-1 gap-3">
             {media.production_companies?.map((company) => (
-              <div key={company.id} className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div key={company.id} className="rounded-xl border border-white/10 bg-white/5 p-3 lg:p-4">
                 <p className="font-medium text-white">
                   {company.name}
                 </p>

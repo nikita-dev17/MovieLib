@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-neutral-950">
       <div className="mx-auto max-w-7xl px-8 py-8">
 
-        <Link to="/" className="text-2xl font-bold text-white">
+        <Link to="/" className="text-xl lg:text-2xl font-bold text-white">
           {APP_NAME}
         </Link>
 

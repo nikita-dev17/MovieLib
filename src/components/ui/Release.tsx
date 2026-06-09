@@ -10,7 +10,7 @@ export default function Release ({ release_date, first_air_date, className="" }:
 
   return (
     <p className={`text-white/60 ${className}`}>
-      {date?.slice(0, 7)}
+      {date?.slice(0, 4)}
     </p>
   )
 }

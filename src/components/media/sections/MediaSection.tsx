@@ -22,7 +22,7 @@ export default function MediaSection({ title, description="", type, items }: Med
       {items.length > 0 && (
         <HorizontalSlider>
           {items.map((item) => (
-            <div key={item.id} className="shrink-0">
+            <div key={item.id} className="shrink-0 w-36 lg:w-51.5">
               {type === "actor" && (
                 <ActorCard actor={item as Actor} />
               )}

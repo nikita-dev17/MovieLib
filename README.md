@@ -2,7 +2,15 @@
 
 MovieLib is a movie and TV show discovery platform built with React 19, TypeScript, and the TMDB API.
 
+## Preview
 
+| Home Page | Media Catalog |
+| :---: | :---: |
+| ![Home Page](./docs/home.png) | ![Media Catalog](./docs/media-catalog.png) |
+
+| Details Page | Favorites |
+| :---: | :---: |
+| ![Details Page](./docs/details.png) | ![Favorites](./docs/favorites.png) |
 
 ## Features
 

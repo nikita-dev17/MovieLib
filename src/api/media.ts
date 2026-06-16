@@ -4,10 +4,7 @@ import { tmdbApi } from "./tmdb";
 // POPULAR
 export async function getPopularMovies(page = 1) {
   const { data } = await tmdbApi.get(`/movie/popular?page=${page}`)
-  return {
-    result: data.results, 
-    total_page: Math.min(data.total_pages, 500)
-  }
+  return { result: data.results, total_page: Math.min(data.total_pages, 500) }
 }
 
 export async function getPopularTVShows(page = 1) {

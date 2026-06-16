@@ -83,6 +83,3 @@ This project was created to practice building a professional-grade React applica
 * Persistent user data handling
 
 * Component composition and state management
-
-## Author
-Nikita Ivanov
